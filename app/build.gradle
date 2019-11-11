@@ -1,0 +1,215 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'io.fabric'
+
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionPatch = 1
+ext.minimumSdkVersion = 21
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.magnum.app"
+        minSdkVersion 21
+        targetSdkVersion 29
+        multiDexEnabled true
+        versionCode generateVersionCode()
+        versionName generateVersionName()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+/*
+            buildConfigField "String", "BASE_URL", '"http://192.168.10.171:2064"'
+            buildConfigField "String", "BASE_URL", '"http://180.151.69.138:2064/"'
+
+*/
+            buildConfigField "String", "BASE_URL", '"http://15.206.23.141/"'
+
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+/*
+            buildConfigField "String", "BASE_URL", '"http://192.168.10.171:2064"'
+            buildConfigField "String", "BASE_URL", '"http://180.151.69.138:2064/"'
+*/
+            buildConfigField "String", "BASE_URL", '"http://15.206.23.141/"'
+
+
+        }
+
+    }
+    repositories {
+        mavenCentral()
+        google()
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    dataBinding { //data binding enabled
+        enabled = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+/*    configurations {
+        all*.exclude group: 'com.google.guava', module: 'listenablefuture'
+    }*/
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //kotlin dependencies
+    implementation KotlinDependencies.kotlinStd
+    implementation KotlinDependencies.kotlinReflex
+
+    androidTestImplementation SupportDependencies.findBugs
+
+    /*Android Support Lib*/
+    implementation SupportDependencies.appCompat
+
+    /*Android Design Support Lib*/
+    implementation SupportDependencies.design
+
+    /*Constraint Layout Support Lib*/
+    implementation SupportDependencies.constraintlayout
+
+    implementation SupportDependencies.exifInterface
+
+    //viewpager2 behaves like viewpager, with recyclerView adapter
+    implementation SupportDependencies.viewpager2
+
+    /*recyclerview selection Lib*/
+    implementation SupportDependencies.recyclerviewSelection
+
+    /*Retrofit*/
+    implementation RetrofitDependencies.retrofit
+    implementation RetrofitDependencies.gson
+
+    /*Api Logging*/
+    implementation RetrofitDependencies.okhttp
+
+    /*Moshi*/
+    implementation GeneralDependencies.moshi
+    implementation RetrofitDependencies.moshiConverter
+
+
+    /*Glide*/
+    implementation GildeDependencies.gilde
+    annotationProcessor GildeDependencies.compiler
+
+    /*rx java */
+    implementation GeneralDependencies.rxjava
+    implementation RetrofitDependencies.rxAdapterJava
+    implementation Rxjava2Dependencies.rxjava2
+    implementation Rxjava2Dependencies.rxandroid
+
+    /*Timber log library*/
+    implementation GeneralDependencies.timber
+
+    /*firebase dependencies*/
+    implementation FirebaseDependencies.core
+    implementation FirebaseDependencies.auth
+    implementation FirebaseDependencies.messaging
+    implementation FirebaseDependencies.analytics
+
+    /*gmail login*/
+    implementation GeneralDependencies.gmsPlayServiceAuth
+    implementation GApiClientDependencies.android
+    implementation GApisDependencies.people
+
+    /*fb login*/
+    implementation GeneralDependencies.fbLogin
+
+    /*mockito unit test*/
+    testImplementation GeneralDependencies.mockito
+
+    /*junit unit test*/
+    testImplementation GeneralDependencies.junit
+
+    /*ui test & espresso test*/
+    androidTestImplementation GeneralDependencies.testRunner
+    androidTestImplementation(GeneralDependencies.espresso, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
+    })
+
+    //lifeCycle  Dependencies
+    implementation LifeCycle.extensions
+    implementation LifeCycle.viewmodel
+
+    //sdp library for variable dp sizes
+    implementation GeneralDependencies.sdp
+
+    //exo videoPlayer
+    implementation GeneralDependencies.exoPlayer
+
+    implementation GeneralDependencies.pageIndicator
+
+    //google map dependencies
+    implementation GeneralDependencies.googleMap
+    implementation GeneralDependencies.googleLocation
+
+    //chat sdk
+    implementation GeneralDependencies.sendBird
+
+    implementation GeneralDependencies.galleryPicker
+
+    //for video trimming capability
+    implementation(GeneralDependencies.mp4Parser)
+
+    //for image and video Picking
+    implementation GeneralDependencies.yanzhenjieMediaPicker
+
+    //for image cropping
+    implementation GeneralDependencies.edmoImageCropper
+
+    //firebase crashlytics
+    implementation GeneralDependencies.crashLytics
+
+    //image compression library
+    implementation GeneralDependencies.imageZipper
+
+}
+
+androidExtensions {
+    experimental = true
+}
+
+private Integer generateVersionCode() {
+    return ext.minimumSdkVersion * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
+
+private String generateVersionName() {
+    return "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+}

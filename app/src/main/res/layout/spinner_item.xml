@@ -1,0 +1,13 @@
+<TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/text1"
+        style="?android:attr/spinnerItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/standard_4"
+        android:paddingBottom="@dimen/standard_4"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/century_gothic_regular"
+        android:singleLine="true"
+        android:textAlignment="inherit"
+        android:textSize="@dimen/sp_14"/>

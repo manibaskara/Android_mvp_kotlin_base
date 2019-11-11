@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="standard_1">1dp</dimen>
+    <dimen name="standard_4">4dp</dimen>
+    <dimen name="standard_16">16dp</dimen>
+    <dimen name="standard_22">22dp</dimen>
+    <dimen name="standard_200">200dp</dimen>
+
+    <dimen name="bottom_navigation_height">75dp</dimen>
+
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+
+    <!-- VIDEO TRIMMER-->
+</resources>

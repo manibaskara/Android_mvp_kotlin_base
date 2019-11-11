@@ -1,0 +1,90 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--
+                <item name="android:windowFullscreen">true</item>
+        -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!--Todo -> Any changes in AppTheme need to be updated in styles(v27) as well.-->
+        <!--overridden on v27 for supporting notch display-->
+<!--
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+-->
+        -->
+
+    </style>
+
+
+    <style name="textNormalBlack16">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="android:textColor">@color/black_70</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="textTitle18">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColor">@color/text_title_color</item>
+        <item name="android:fontFamily">@font/century_gothic_bold</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+
+    <style name="textTitle16">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/century_gothic_bold</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/text_title_color</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+
+    <style name="toolbarTitleStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/century_gothic_bold</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_drawable</item>
+    </style>
+
+    <style name="primaryFullButtonCorner">
+        <item name="android:background">@drawable/btn_primary_fill_corner</item>
+        <item name="android:fontFamily">@font/century_gothic_bold</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="primaryStrokeButtonCorner">
+        <item name="android:background">@drawable/btn_primary_stroke_corner</item>
+        <item name="android:fontFamily">@font/century_gothic_bold</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="bottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/century_gothic_regular</item>
+    </style>
+</resources>

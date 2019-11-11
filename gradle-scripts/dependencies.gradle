@@ -1,0 +1,192 @@
+/*
+25/09/2019
+Todo-> No longer using this file for dependencies. Update the dependencies in buildSrc/src/main/java/dependencies.kt file
+*/
+
+ext {
+
+    //Packages
+    supportPackage = 'androidx.appcompat'
+    recyclerviewSelectionPackage = 'androidx.recyclerview'
+    designSupportPackage = 'com.google.android.material'
+    constraintLayoutPackage = 'androidx.constraintlayout'
+    exifInterfacePackage = 'androidx.exifinterface'
+    retrofitPackage = 'com.squareup.retrofit2'
+    okhttpPackage = 'com.squareup.okhttp3'
+    moshiPackage = 'com.squareup.moshi'
+    gildePackage = 'com.github.bumptech.glide'
+    picassoPackage = 'com.squareup.picasso'
+    rxjavaPackage = 'io.reactivex'
+    rxjava2Package = 'io.reactivex.rxjava2'
+    timberPackage = 'com.jakewharton.timber'
+    firebasePackage = 'com.google.firebase'
+    gmsPackage = 'com.google.android.gms'
+    gApiClientPackage = 'com.google.api-client'
+    gApisPackage = 'com.google.apis'
+    fbPackage = 'com.facebook.android'
+    mockitoPackage = 'org.mockito'
+    junitPackage = 'junit'
+    androidxTestPackage = 'androidx.test'
+    espressoPackage = 'androidx.test.espresso'
+    roomPackage = 'androidx.room'
+    lifeCyclePackage = 'android.arch.lifecycle'
+    sdpPackage = 'com.intuit.sdp'
+    exoPackage = 'com.google.android.exoplayer'
+    pageIndicatorPackage = 'com.github.chahine'
+    sendBirdPackage = 'com.sendbird.sdk'
+    videoTrimmerPackage = 'life.knowledge4'
+    galleryPickerPackage = 'com.github.tizisdeepan'
+    mp4ParserPackage = 'com.googlecode.mp4parser'
+    edmoImageCropperPackage = 'com.theartofdev.edmodo'
+    yanzaMediaPickerPackage = 'com.yanzhenjie'
+    crashlyticsPackage = 'com.crashlytics.sdk.android'
+    viewPager2Package = 'androidx.viewpager2'
+    imageZipperPackage = 'com.github.amanjeetsingh150'
+
+    //Version
+    supportVersion = '1.1.0-beta01'
+    designSupportVersion = '1.1.0-alpha03'
+    constraintLayoutVersion = '2.0.0-alpha3'
+    exifInterfaceVersion = '1.1.0-beta01'
+    retrofitVersion = '2.4.0'
+    okhttpVersion = '3.10.0'
+    moshiVersion = '1.7.0'
+    recyclerSelectionVersion = '1.0.0'
+    gildeVersion = '4.8.0'
+    picassoVersion = '2.71828'
+    rxjavaVersion = '1.3.4'
+    rxjava2Version = '2.1.16'
+    rrxandroidVersion = '2.0.2'
+    timberVersion = '4.7.1'
+    firebaseCoreVersion = '17.0.1'
+    firebaseAuthVersion = '18.1.0'
+    firebaseMessagingVersion = '19.0.1'
+    playServiceAuthVersion = '16.0.0'
+    fbLoginVersion = '[5,6)'
+    mockitoVersion = '2.19.0'
+    mapVersion = '17.0.0'
+    junitVersion = '4.12'
+    androidxTestRunnerVersion = '1.1.2-alpha01'
+    espressoVersion = '3.1.2-alpha01'
+    gApisPeopleVersion = 'v1-rev299-1.23.0'
+    roomVersion = '2.1.0-rc01'
+    lifeCycleVersion = '1.1.1'
+    sdpVersion = '1.0.6'
+    exoVersion = '2.9.6'
+    pageIndicatorVersion = '0.2.8'
+    sendBirdVersion = '3.0.92'
+    videoTrimmerVersion = '1.0'
+    galleryPickerVersion = '1.0.1'
+    mp4ParserVersion = '1.1.20'
+    edmoImageCropperVersion = '2.8.0'
+    yanzaMediaPickerVersion = '2.1.3'
+    crashlyticsVersion = '2.10.1'
+    viewPager2Version = '1.0.0-beta02'
+    imageZipperVersion = '1.3'
+
+    supportDependencies = [
+            design               : buildDependency(designSupportPackage, 'material', designSupportVersion),
+            appCompat            : buildDependency(supportPackage, 'appcompat', supportVersion),
+            constraintlayout     : buildDependency(constraintLayoutPackage, 'constraintlayout', constraintLayoutVersion),
+            recyclerviewSelection: buildDependency(recyclerviewSelectionPackage, 'recyclerview-selection', recyclerSelectionVersion),
+            exifInterface        : buildDependency(exifInterfacePackage, 'exifinterface', exifInterfaceVersion),
+            viewpager2           : buildDependency(viewPager2Package, 'viewpager2', viewPager2Version)
+    ]
+    lifeCycle = [
+            extensions: buildDependency(lifeCyclePackage, 'extensions', lifeCycleVersion),
+            viewmodel : buildDependency(lifeCyclePackage, 'viewmodel', lifeCycleVersion)
+    ]
+
+    retrofitDependencies = [
+            retrofit     : buildDependency(retrofitPackage, 'retrofit', retrofitVersion),
+            gson         : buildDependency(retrofitPackage, 'converter-gson', retrofitVersion),
+            moshi        : buildDependency(retrofitPackage, 'converter-moshi', retrofitVersion),
+            rxAdapterJava: buildDependency(retrofitPackage, 'adapter-rxjava2', retrofitVersion),
+            okhttp       : buildDependency(okhttpPackage, 'logging-interceptor', okhttpVersion)
+    ]
+
+    roomDependencies = [
+            roomRunTime : buildDependency(roomPackage, 'room-runtime', roomVersion),
+            roomKtx     : buildDependency(roomPackage, 'room-ktx', roomVersion),
+            roomCompiler: buildDependency(roomPackage, 'room-compiler', roomVersion),
+            roomTesting : buildDependency(roomPackage, 'room-testing', roomVersion),
+            roomRxJava  : buildDependency(roomPackage, 'room-rxjava2', roomVersion)
+
+    ]
+
+    moshi = buildDependency(moshiPackage, 'moshi-kotlin', moshiVersion)
+
+    gildeDependencies = [
+            gilde   : buildDependency(gildePackage, 'glide', gildeVersion),
+            compiler: buildDependency(gildePackage, 'compiler', gildeVersion)
+    ]
+
+    picasso = buildDependency(picassoPackage, 'picasso', picassoVersion)
+
+    rxjava = buildDependency(rxjavaPackage, 'rxjava', rxjavaVersion)
+
+    rxjava2Dependencies = [
+            rxjava2  : buildDependency(rxjava2Package, 'rxjava', rxjava2Version),
+            rxandroid: buildDependency(rxjava2Package, 'rxandroid', rrxandroidVersion)
+    ]
+
+    sdp = buildDependency(sdpPackage, 'sdp-android', sdpVersion)
+
+    exoPlayer = buildDependency(exoPackage, 'exoplayer', exoVersion)
+
+    pageIndicator = buildDependency(pageIndicatorPackage, 'pageindicator', pageIndicatorVersion)
+
+    googleMap = buildDependency(gmsPackage, 'play-services-maps', mapVersion)
+
+    googleLocation = buildDependency(gmsPackage, 'play-services-location', mapVersion)
+
+    sendBird = buildDependency(sendBirdPackage, 'sendbird-android-sdk', sendBirdVersion)
+
+    timber = buildDependency(timberPackage, 'timber', timberVersion)
+
+    k4lVideoTrimmer = buildDependency(videoTrimmerPackage, 'k4l-video-trimmer', videoTrimmerVersion)
+
+    galleryPicker = buildDependency(galleryPickerPackage, 'gallerypicker', galleryPickerVersion)
+
+    imageZipper = buildDependency(imageZipperPackage, 'ImageZipper', imageZipperVersion)
+
+    mp4Parser = buildDependency(mp4ParserPackage, 'isoparser', mp4ParserVersion)
+
+    yanzhenjieMediaPicker = buildDependency(yanzaMediaPickerPackage, 'album', yanzaMediaPickerVersion)
+
+    edmoImageCropper = buildDependency(edmoImageCropperPackage, 'android-image-cropper', edmoImageCropperVersion)
+
+    firebaseDependencies = [
+            core     : buildDependency(firebasePackage, 'firebase-core', firebaseCoreVersion),
+            auth     : buildDependency(firebasePackage, 'firebase-auth', firebaseAuthVersion),
+            messaging: buildDependency(firebasePackage, 'firebase-messaging', firebaseMessagingVersion),
+            analytics: buildDependency(firebasePackage, 'firebase-analytics', firebaseCoreVersion)
+    ]
+
+    crashLytics = buildDependency(crashlyticsPackage, 'crashlytics', crashlyticsVersion)
+
+    gApiClientDependencies = [
+            android: buildDependency(gApiClientPackage, 'google-api-client-android', '1.22.0')
+    ]
+
+    gApisDependencies = [
+            people: buildDependency(gApisPackage, 'google-api-services-people', gApisPeopleVersion)
+    ]
+
+    gmsPlayServiceAuth = buildDependency(gmsPackage, 'play-services-auth', playServiceAuthVersion)
+
+    fbLogin = buildDependency(fbPackage, 'facebook-login', fbLoginVersion)
+
+    mockito = buildDependency(mockitoPackage, 'mockito-core', mockitoVersion)
+
+    junit = buildDependency(junitPackage, junitPackage, junitVersion)
+
+    testRunner = buildDependency(androidxTestPackage, 'runner', androidxTestRunnerVersion)
+
+    espresso = buildDependency(espressoPackage, 'espresso-core', espressoVersion)
+
+}
+
+static String buildDependency(String pack, String dependency, String version) {
+    return "${pack}:${dependency}:${version}"
+}

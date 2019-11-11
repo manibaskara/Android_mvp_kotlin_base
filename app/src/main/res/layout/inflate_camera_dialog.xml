@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_gravity="center"
+                                   android:elevation="@dimen/_4sdp"
+                                   app:cardCornerRadius="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCamera"
+            style="@style/textNormalBlack16"
+            android:drawableStart="@drawable/ic_photo_camera_black"
+            android:drawablePadding="@dimen/_20sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:text="@string/capture"
+            app:layout_constraintEnd_toEndOf="@+id/btnGallery"
+            app:layout_constraintStart_toStartOf="@+id/btnGallery"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/standard_1"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@color/grey_transparency"
+            app:layout_constraintEnd_toEndOf="@+id/btnGallery"
+            app:layout_constraintStart_toStartOf="@+id/btnGallery"
+            app:layout_constraintTop_toBottomOf="@+id/btnCamera"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnGallery"
+            style="@style/textNormalBlack16"
+            android:layout_width="wrap_content"
+            android:drawableStart="@drawable/ic_gallery_black"
+            android:drawablePadding="@dimen/_20sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:text="@string/choose_from_gallery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Skinella</string>
+    <string name="action_settings">Settings</string>
+    <!--
+    &lt;!&ndash;change below fb credential during integration&ndash;&gt;
+    <string name="facebook_app_id">372233989999160</string>
+    <string name="fb_login_protocol_scheme">fb372233989999160</string>-->
+
+
+    <!--    &lt;!&ndash;fb console skinelllatest@gmail.com
+        <string name="facebook_app_id">486403518782802</string>
+        <string name="fb_login_protocol_scheme">fb486403518782802</string>-->
+
+    <!--fb console client login-->
+    <string name="facebook_app_id">2244041702390665</string>
+    <string name="fb_login_protocol_scheme">fb2244041702390665</string>
+
+    <string name="message_no_network_found">No network found</string>
+    <string name="profile">Profile</string>
+    <string name="my_profile">My Profile</string>
+    <string name="powered_by">POWERED BY</string>
+    <string name="contest">Contest</string>
+    <string name="add_feed">Add Feed</string>
+    <string name="feeds">Feeds</string>
+    <string name="more">More</string>
+    <string name="post">POST</string>
+    <string name="capture">Capture</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="double_click_to_exit">Please click BACK again to exit</string>
+    <string name="all_contestants">All Contestants</string>
+
+    <string name="update">Update</string>
+
+    <string name="sucessfully_posted">Posted</string>
+
+
+    <!--test instagram account-->
+    <!--<string name="instagram_client_id">2ab398f240494bb2a9f1dd98eef8e4d4</string>-->
+    <!--production instagram account-->
+    <string name="instagram_client_id">fc594cf620e046a981d3693fa592ab39</string>
+
+    <string name="instagram_redirect_url">https://www.skinella.com/</string>
+    <string name="instagram_base_url">https://api.instagram.com/</string>
+    <string name="instagram_get_user_info_url">
+        https://api.instagram.com/v1/users/self/?access_token=
+    </string>
+
+    <string name="new_version_available">New version available</string>
+    <string name="please_update_the_app_to_continue">Please, update the app to continue.</string>
+
+
+</resources>
